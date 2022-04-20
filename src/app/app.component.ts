@@ -11,16 +11,28 @@ export class AppComponent {
 
   }
 
-  ngOnInit() {
-    this.getAdvice()
-  }
-  
 
-  getAdvice(){
+  ngOnInit() {
+  
+  }
+
+  objId:any = []
+  objAdvice:any = []
+
+
+  nextAdvice(){
+
+
     this.service.getAdvice().subscribe( (success) => {
-      console.log(success)
+
+      this.objId = "Advice #" + success.slip.id
+      this.objAdvice = success.slip.advice
+
     }, (error) => {
-      console.log(error)
+
+
     })
   }
+
+  
 }

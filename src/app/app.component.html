@@ -2,28 +2,32 @@
 
     <div id="boxAdvice">
 
-        <p>Advice #13</p>
+        <p> {{objId}}</p>
 
-        <h2>ADVICE</h2>
+        <h2> {{objAdvice}} </h2>
 
         <div id="boxPlay">
 
-            <picture>
+            <div id="boxPlay2">
+
+             <picture>
 
                 <source srcset="./../assets/pattern-divider-desktop.svg" media="(min-width:768px)">
                 <source srcset="./../assets/pattern-divider-mobile.svg">
             
                 <img src="./../assets/pattern-divider-desktop.svg">
 
-              </picture>
+             </picture>
+
+            </div>
               
         </div>
 
         <div id="boxFollow">
 
-            <button>
-
-            <img src="./../assets/icon-dice.svg" alt="">
+            <button (click) = "nextAdvice()">
+ 
+              <img src="./../assets/icon-dice.svg" alt="">
 
             </button>
 

@@ -9,20 +9,103 @@ section{
 
     #boxAdvice{
         width: 50%;
+        border-radius: 6px;
         background-color: hsl(217, 19%, 38%);
+
+        p{
+            color: hsl(150, 100%, 66%);
+            padding: 25px;
+            font-family: 'Manrope', sans-serif;
+            text-align: center;
+        }
+
+        h2{
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-family: 'Manrope', sans-serif;
+        }
     }
 
     #boxPlay{
-        width: 80%;
-        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 5px;
+
+        #boxPlay2{
+            width: 90%;
+
+            picture{
+                img{
+                    width: 100%;
+                }
+            }
+        }
+
+
     }
 
     #boxFollow{
-        background-color: red;
+        position: relative;
+        height: 5vh;
 
         button{
-            background-color: green;
+            cursor: pointer;
+            width: 53px;
+            height: 50px;
+            border: none;
+            border-radius: 20px;
+            background-color: hsl(150, 100%, 66%);
+            position: absolute;
+            top: 35%;
+            right: 46.5%;
+            display: flex;
+            justify-content: center ;
+            align-items: center;
+            
             
         }
     }
+}
+
+@media screen and (max-width:768px){
+
+    section{
+
+        #boxFollow{
+
+            button{
+                right: 38%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:769px) and (max-width:1024px){
+
+    section{
+
+        #boxFollow{
+
+            button{
+                right: 44%;
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width:1024px){
+
+    section{
+
+        #boxFollow{
+
+            button{
+                right: 46.5%;
+            }
+        }
+    }
+
 }
