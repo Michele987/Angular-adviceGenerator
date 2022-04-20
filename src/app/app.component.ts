@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ServiceService } from './services/service.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'adviceGenerator';
+  constructor(private service: ServiceService) { 
+
+  }
+
+  ngOnInit() {
+    this.getAdvice()
+  }
+  
+
+  getAdvice(){
+    this.service.getAdvice().subscribe( (success) => {
+      console.log(success)
+    }, (error) => {
+      console.log(error)
+    })
+  }
 }
